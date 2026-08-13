@@ -1,0 +1,287 @@
+/* ===========================================================
+   Gift of the Givers Foundation — Main Stylesheet
+   Colour scheme: deep blue (#1F3864) + warm orange (#E8720C)
+   =========================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #1F3864;
+  --orange: #E8720C;
+  --light-bg: #F7F8FA;
+  --text: #2A2A2A;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header / Navigation ---------- */
+header {
+  background: var(--blue);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-weight: 600;
+  padding: 8px 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  border-color: var(--orange);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(rgba(31,56,100,0.75), rgba(31,56,100,0.75)), url('../images/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #cf6208;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  margin-left: 12px;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--blue);
+}
+
+/* ---------- Sections ---------- */
+main section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  color: var(--blue);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-alt {
+  background: var(--light-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+/* ---------- Forms ---------- */
+form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  color: #b00020;
+  font-size: 0.85rem;
+  min-height: 18px;
+}
+
+#form-status {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ---------- Contact / Map ---------- */
+.locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--orange);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding-top: 10px;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav li {
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  nav a {
+    display: block;
+    padding: 12px 4px;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

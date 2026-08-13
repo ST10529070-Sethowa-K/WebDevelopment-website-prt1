@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Gift of the Givers Foundation</title>
+  <meta name="description" content="Contact Gift of the Givers Foundation offices in Pietermaritzburg and Johannesburg, or send us a message directly.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Gift of Givers logo" style="height:32px; vertical-align:middle; margin-right:8px;">
+        Gift of the <span>Givers</span>
+        </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Offices</h2>
+      <div class="locations">
+        <div class="card">
+          <h3>Pietermaritzburg (Head Office)</h3>
+          <p>96 Kenneth Kaunda Road, Pietermaritzburg, KwaZulu-Natal, South Africa</p>
+          <p>Tel: 033 342 0323</p>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Pietermaritzburg,South+Africa&output=embed"
+              loading="lazy"
+              title="Map of Pietermaritzburg office"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Johannesburg Office</h3>
+          <p>Sandton, Johannesburg, Gauteng, South Africa</p>
+          <p>Tel: 011 234 5678</p>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Sandton,Johannesburg,South+Africa&output=embed"
+              loading="lazy"
+              title="Map of Johannesburg office"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <h2>Send Us a Message</h2>
+      <form id="contact-form" data-validate novalidate>
+        <div>
+          <label for="c-fullname">Full Name</label>
+          <input type="text" id="c-fullname" name="fullname" required>
+          <div class="error" id="c-fullname-error"></div>
+        </div>
+
+        <div>
+          <label for="c-email">Email Address</label>
+          <input type="email" id="c-email" name="email" required>
+          <div class="error" id="c-email-error"></div>
+        </div>
+
+        <div>
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" required></textarea>
+          <div class="error" id="c-message-error"></div>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gift of the Givers Foundation. NPO 032-031 | PBO 930018993.</p>
+    <p><a href="contact.html">Contact us</a> | <a href="enquiry.html">Volunteer or Sponsor</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry | Gift of the Givers Foundation</title>
+  <meta name="description" content="Get in touch with Gift of the Givers Foundation to volunteer, become a sponsor, or ask about our humanitarian projects.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+       <img src="images/logo.png" alt="Gift of the Givers logo" style="height:32px; vertical-align:middle; margin-right:8px;">
+       Gift of the <span>Givers</span>
+       </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Volunteer or Sponsor Enquiry</h2>
+      <p style="text-align:center; max-width:600px; margin:0 auto;">
+        Interested in getting involved? Let us know whether you'd like to volunteer your time or partner with us as a sponsor, and our team will be in touch.
+      </p>
+
+      <form id="enquiry-form" data-validate novalidate>
+        <div>
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+          <div class="error" id="fullname-error"></div>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+          <div class="error" id="email-error"></div>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div>
+          <label for="enquiry-type">I am interested in</label>
+          <select id="enquiry-type" name="enquiry-type" required>
+            <option value="">-- Please select --</option>
+            <option value="volunteer">Becoming a Volunteer</option>
+            <option value="sponsor">Becoming a Sponsor</option>
+            <option value="other">Other Enquiry</option>
+          </select>
+          <div class="error" id="enquiry-type-error"></div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us a bit about how you'd like to help..."></textarea>
+          <div class="error" id="message-error"></div>
+        </div>
+
+        <button type="submit" class="btn">Submit Enquiry</button>
+        <p id="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gift of the Givers Foundation. NPO 032-031 | PBO 930018993.</p>
+    <p><a href="contact.html">Contact us</a> | <a href="enquiry.html">Volunteer or Sponsor</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
